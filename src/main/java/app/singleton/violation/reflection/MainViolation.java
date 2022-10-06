@@ -1,4 +1,4 @@
-package app.singleton.violation;
+package app.singleton.violation.reflection;
 
 import java.lang.reflect.Constructor;
 
@@ -18,7 +18,7 @@ public class MainViolation {
         System.out.println("s2 = " + s2.hashCode());
 
         //Usando reflexion
-        Class clazz = Class.forName("app.singleton.violation.Singleton");
+        Class clazz = Class.forName("app.singleton.violation.reflection.Singleton");
         Constructor<Singleton> constructor = clazz.getDeclaredConstructor();
         constructor.setAccessible(true);
 
