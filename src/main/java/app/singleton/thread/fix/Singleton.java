@@ -60,7 +60,9 @@ public class Singleton {
      * si no, luego sincronizamos.
      * De esta manera, solo sincronizamos la primera vez, justo lo que queremos.
      *
-     *
+     * Si el rendimiento es un problema en el uso del método getInstance(),
+     * entonces este método de implementación de Singleton puede reducir drásticamente la
+     * sobrecarga.
      */
     public static Singleton getInstance() {
         if (instance == null) { //check 1
