@@ -1,6 +1,6 @@
 package app.singleton.violation.clonacion;
 
-public class ClonacionMain {
+public class MainClonacion {
     public static void main(String[] args) throws Exception {
         Singleton s1 = Singleton.getInstance();
         Singleton s2 = Singleton.getInstance();

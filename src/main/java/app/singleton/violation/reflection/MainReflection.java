@@ -10,7 +10,7 @@ import java.lang.reflect.Constructor;
  * ejemplo a continuación.
  * */
 
-public class MainViolation {
+public class MainReflection {
     public static void main(String[] args) throws Exception {
         Singleton s1 = Singleton.getInstance();
         Singleton s2 = Singleton.getInstance();
