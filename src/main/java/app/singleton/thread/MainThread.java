@@ -15,11 +15,14 @@ import java.util.concurrent.Executors;
 public class MainThread {
     public static void main(String[] args) {
 
-         //Al ejecutar los dos hilos se obtienen códigos Hash distintos... ¡Ups! tenemos que solucionarlo.
+        //Al ejecutar los dos hilos se obtienen códigos Hash distintos (a veces el mismo, pero por lo general siempre distinto)
+        //Esto sucede porque como estamos en un entorno multiproceso, varios procesos (en este caso 2 hilos)
+        //tratan de crear la instancia y lo logran en procesos distintos
         ExecutorService service = Executors.newFixedThreadPool(2);
         service.submit(Singleton::useSingleton);
         service.submit(Singleton::useSingleton);
-        service.shutdown();;
+        service.shutdown();
+        ;
 
     }
 }
